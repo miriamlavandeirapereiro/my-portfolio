@@ -1,0 +1,254 @@
+h1 {
+    font-style: italic;
+    text-align: justify;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-top: 0;
+}
+
+section {
+    background-color: antiquewhite;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+section div {
+    display: contents;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    background-color: bisque;
+    padding: 10px;
+}
+
+footer a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration-style: wavy;
+    font-style: italic;
+}
+
+footer img {
+    width: 64px;
+    height: 64px;
+}
+
+.round-image-profile {
+    width: 100px;
+    border-radius: 150px;
+    border: solid rgb(173, 63, 94);
+    position: static;
+}
+
+.navbar {
+    background-color: bisque;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.menu {
+    z-index: 1;
+}
+
+.menu a {
+    color: black;
+}
+
+.menu-items li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+.menu input:checked~ul {
+    transform: none;
+}
+
+.header-image {
+    background-color: antiquewhite;
+    display: flex;
+    width: 100%;
+    height: 25vh;
+    margin: auto;
+    align-items: center;
+}
+
+.wrapper {
+    width: 370px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #d2c0c0;
+    padding: 3px;
+    border-radius: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+.progress-bar-fill {
+    display: block;
+    height: 15px;
+    background-color: rgb(173, 63, 94);
+    border-radius: 20px;
+}
+
+.progress-bar-fill.status1 {
+    animation: progress-bar-status1 10s;
+}
+
+.progress-bar-fill.status2 {
+    animation: progress-bar-status2 10s;
+}
+
+.progress-bar-fill.status3 {
+    animation: progress-bar-status3 10s;
+}
+
+.progress-bar-fill.status4 {
+    animation: progress-bar-status4 10s;
+}
+
+.contact input {
+    margin-bottom: 10px;
+}
+
+.contact fieldset {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact fieldset div {
+    display: block;
+}
+
+
+.contact button {
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+@keyframes progress-bar-status1 {
+    0% {
+        opacity: 1;
+        background-color: rgb(173, 63, 94);
+        width: 0%;
+    }
+
+    90% {
+        opacity: 1;
+        background-color: rgb(173, 63, 94);
+        width: 90%;
+    }
+}
+
+@keyframes progress-bar-status2 {
+    0% {
+        opacity: 1;
+        background-color: rgb(173, 63, 94);
+        width: 0%;
+    }
+
+    75% {
+        opacity: 1;
+        background-color: rgb(173, 63, 94);
+        width: 75%;
+    }
+}
+
+@keyframes progress-bar-status3 {
+    0% {
+        opacity: 1;
+        background-color: rgb(173, 63, 94);
+        width: 0%;
+    }
+
+    50% {
+        opacity: 1;
+        background-color: rgb(173, 63, 94);
+        width: 50%;
+    }
+}
+
+@keyframes progress-bar-status4 {
+    0% {
+        opacity: 1;
+        background-color: rgb(173, 63, 94);
+        width: 0%;
+    }
+
+    40% {
+        opacity: 1;
+        background-color: rgb(173, 63, 94);
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu button {
+        position: relative;
+        z-index: 2;
+        border-radius: 20px;
+        background-color: rgb(231 196 155);
+        border: 1px solid rgb(173, 63, 94);
+        padding: 4px 15px;
+    }
+
+    .menu input {
+        width: 55px;
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .menu-items {
+        position: fixed;
+        right: 0;
+        width: 150px;
+        margin: -73px 0 0 0;
+        padding: 50px;
+        padding-top: 125px;
+        background: rgb(231 196 155 / 88%);
+        list-style-type: none;
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu button {
+        display: none;
+    }
+
+    .menu input {
+        display: none;
+    }
+
+    .menu-items {
+        display: flex;
+        gap: 2em;
+        list-style: none;
+    }
+
+    .menu-items a:hover {
+        color: rgb(207, 113, 45);
+    }
+}
